@@ -37,7 +37,7 @@ void List_Int::push_back(int x) {
 
 void List_Int::push_front(int x)  {
   Node *ptr = new Node(x);
-  /*empty condition*/
+  /* condition*/
 
   if((head==NULL) && (tail == NULL))  {
     push_back(x);

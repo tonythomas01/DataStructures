@@ -14,3 +14,12 @@ Node Iterator_Node::operator ++ (int) {
   node_ptr = node_ptr->get_next_ptr();
   return (*temp_ptr);
 }
+
+Node& Iterator_Node::operator--()  {
+  assert(this->node_ptr!= NULL);
+  assert(this->node_ptr->get_prev_ptr()!= NULL);
+  assert(this->node_ptr->get_prev_ptr() != NULL);
+
+  node_ptr = node_ptr->get_prev_ptr();
+  return (*node_ptr);
+}

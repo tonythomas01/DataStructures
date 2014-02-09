@@ -13,7 +13,8 @@ class Iterator_Node
   public:
     Iterator_Node(Node *p):node_ptr(p)  {}
     int& operator *() {
-      assert(node_ptr != NULL);
+      assert(this->node_ptr != NULL);
+      assert(this->node_ptr->get_next_ptr()!= NULL);
       return node_ptr->data;
     }
     Node* operator ->() {
@@ -29,6 +30,7 @@ class Iterator_Node
     Node operator++(int);
     Node operator++();
     Node* get_node_ptr();
+    Node& operator--();
 
 
 };

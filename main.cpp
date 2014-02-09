@@ -5,6 +5,7 @@
 #include "Node.h"
 #include<cassert>
 #include "Iterator_Node.h"
+#include "List_double_ptr_Int.h"
 
 using namespace std;
 
@@ -45,6 +46,13 @@ int main()
     //List_Int::iterator i; /* Error. */
     //i--; /* Error. */
     //i->; /* Error. */
+
+    //starting with Doubly linked list
+    cout<<"\n Starting Doubly linked list";
+    List_double_ptr_Int DL1;
+    DL1.push_back(10);
+  //  DL1.print_list();
+
     return EXIT_SUCCESS;
 
 
