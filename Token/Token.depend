@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1391670722 source:/home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/main.cpp
+	<iostream>
+	"stack.h"
+	<stdlib.h>
+	"Tokenizer.h"
+
+1391663808 source:/home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/Token.cpp
+	"Token.h"
+
+1391667171 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/Token.h
+	"Token.cpp"
+
+1391665669 source:/home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/Tokenizer.cpp
+	"Tokenizer.h"
+	<iostream>
+
+1391667116 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/Tokenizer.h
+	<iostream>
+	"Token.h"
+	"Tokenizer.cpp"
+
+1391663808 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/Token.cpp
+	"Token.h"
+
+1391670572 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/stack.h
+	<stdio.h>
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	<string>
+	<climits>
+	<fstream>
+	"stack_template.cpp"
+
+1391670187 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/stack_template.cpp
+	"stack.h"
+
+1391665669 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab3/Token/Tokenizer.cpp
+	"Tokenizer.h"
+	<iostream>
+
