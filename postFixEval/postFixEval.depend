@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1392873815 source:/home/likewise-open/AMRITAVIDYA/u4cse12146/lab/postFixExp/postFixEval/main.cpp
+	<iostream>
+	"stack.h"
+	"Tokenizer.h"
+	"Token.h"
+	<stdio.h>
+
+1391962135 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab/postFixExp/postFixEval/stack.h
+	<stdio.h>
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	<string>
+	<climits>
+	<fstream>
+	"stack_template.cpp"
+
+1391962135 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab/postFixExp/postFixEval/stack_template.cpp
+	"stack.h"
+
+1391962135 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab/postFixExp/postFixEval/Tokenizer.h
+	<iostream>
+	"Token.h"
+	"Tokenizer.cpp"
+
+1391962135 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab/postFixExp/postFixEval/Token.h
+	"Token.cpp"
+
+1391962135 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab/postFixExp/postFixEval/Token.cpp
+	"Token.h"
+
+1392869954 /home/likewise-open/AMRITAVIDYA/u4cse12146/lab/postFixExp/postFixEval/Tokenizer.cpp
+	"Tokenizer.h"
+	<iostream>
+
