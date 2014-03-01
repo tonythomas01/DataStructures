@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1393654061 source:/home/likewise-open/AMRITAVIDYA/u4cse12146/ds/DataStructures/binaryTree/binarytree/binarytree/main.cpp
+	<iostream>
+	"Tree_Int.h"
+
+1393653699 /home/likewise-open/AMRITAVIDYA/u4cse12146/ds/DataStructures/binaryTree/binarytree/binarytree/Tree_Int.h
+	<stdlib.h>
+	<iostream>
+	"Node.h"
+	"Tree_Int.cpp"
+
+1393655890 /home/likewise-open/AMRITAVIDYA/u4cse12146/ds/DataStructures/binaryTree/binarytree/binarytree/Tree_Int.cpp
+	"Tree_Int.h"
+	<iostream>
+
+1393653034 /home/likewise-open/AMRITAVIDYA/u4cse12146/ds/DataStructures/binaryTree/binarytree/binarytree/Node.h
+	<stdlib.h>
+	<iostream>
+	"Node.cpp"
+
+1393651514 /home/likewise-open/AMRITAVIDYA/u4cse12146/ds/DataStructures/binaryTree/binarytree/binarytree/Node.cpp
+
