@@ -15,7 +15,9 @@ int main()
     t1.insert(5);
     cout<<"\n The current size of tree is :"<<t1.size();
     cout<<"\n";
-    cout<<t1.get_root()->right->get_data();
+
+    t1.inorder();
+    t1.search(20);
 
     return 0;
 }

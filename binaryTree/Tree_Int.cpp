@@ -55,7 +55,7 @@ bool Tree_Int::empty() const {
   return (tree_size == 0);
 }
 
-Node<int>* Tree_Int::get_root() const {
+Node<int>* Tree_Int::get_root() {
         return root;
 }
 
@@ -68,15 +68,42 @@ bool Tree_Int::is_leaf(Node<int>* node) {
 /*Traversing the tree using inorder traversal scheme. The first version
 traverses the tree from any particular node and the second version traverses
 from the root node.*/
-/*
-void inorder (Node<int> *node_ptr, ostream& out = cout) const  {
 
+void Tree_Int::inorder(Node<int> *node_ptr, ostream& out = cout)   {
+  if ( node_ptr == NULL ) {
+  return;
+  } else {
+    inorder( node_ptr->get_left());
+    cout<< node_ptr->get_data()<< "  ";
+    inorder(  node_ptr->get_right() );
+  }
   return;
 }
 
-/* Second version
-void inorder(ostream& out = cout) const;
-*/
+/* Second version*/
+void Tree_Int::inorder(ostream& out = cout)   {
+  inorder(this->get_root());
+}
+
+
+void Tree_Int::search( int value ) {
+  Node<int>* ptr = root;
+  search_helper( ptr, value );
+//  cout<< ans->get_data();
+}
+Node<int>* Tree_Int::search_helper( Node<int>* ptr, int value )  {
+  Node<int>* current_node = get_root();
+  Node<int>* ret_node = NULL;
+  if ( current_node->get_data() == value )  {
+    ret_node = current_node;
+  } else if ( current_node->get_data() < value )  {
+    ret_node = search_helper( ptr->get_right(), value);
+  } else if ( current_node->get_data() > value )  {
+    ret_node = search_helper( ptr->get_left(), value );
+  }
+  return ret_node;
+}
+
 
 
 
