@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1398950086 source:/home/router/DataStructures/SortingUsingBST/SortingUsingBST/main.cpp
+	<iostream>
+	"tree_int.h"
+
+1398949846 /home/router/DataStructures/SortingUsingBST/SortingUsingBST/tree_int.h
+	"node.h"
+	"tree_int.cpp"
+
+1398949783 /home/router/DataStructures/SortingUsingBST/SortingUsingBST/node.h
+
+1398950162 /home/router/DataStructures/SortingUsingBST/SortingUsingBST/tree_int.cpp
+	<iostream>
+
