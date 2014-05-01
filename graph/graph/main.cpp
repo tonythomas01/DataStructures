@@ -14,24 +14,17 @@ int main() {
             int x,y;
             cin>>x>>y;
             g.insert(x,y);
-        }
-        else if(c=="print") {
+        } else if(c=="print") {
             g.print();
-        }
-//        else if(c=="delete_edge")
-//        {
-//            int x,y;
-//            cin>>x>>y;
-//            g.delete_edge(x,y);
-//        }
-       else if(c=="delete_vertex") {
+        } else if(c=="delete_edge") {
+            int x,y;
+            cin>>x>>y;
+            g.delete_edge(x,y);
+        } else if(c=="delete_vertex") {
             int x;
             cin>>x;
             g.delete_vertex(x);
-        }
-
-        else
-        {
+        } else {
             cout<<"wrong command\n";
         }
     }while(1);

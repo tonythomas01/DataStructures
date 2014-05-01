@@ -68,3 +68,18 @@ void Graph::delete_vertex(int a)    {
         data.erase(x);
     }
 }
+
+void Graph::delete_edge( int a, int b) {
+    map<int, set<int> > :: iterator x,y;
+    x = data.find(a);
+    y = data.find(b);
+    if( x!= data.end() && y != data.end() ) {
+    /* a and b are present */
+        x->second.erase(b);
+        y->second.erase(a);
+    } else {
+        cout <<" edge not present ";
+    }
+
+
+}
