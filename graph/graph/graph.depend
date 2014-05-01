@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1398971103 source:/home/router/DataStructures/graph/graph/main.cpp
+	<iostream>
+	"graph.h"
+	<string>
+
+1398971193 /home/router/DataStructures/graph/graph/graph.h
+	<iostream>
+	<map>
+	<string>
+	<set>
+	"graph.cpp"
+
+1398972086 /home/router/DataStructures/graph/graph/graph.cpp
+
