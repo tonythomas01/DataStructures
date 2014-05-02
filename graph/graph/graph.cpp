@@ -1,4 +1,7 @@
 #pragma once
+#include<fstream>
+#include<iostream>
+using namespace std;
 
 void Graph::insert(int a, int b)    {
     map<int , set <int> > :: iterator x, y;
@@ -82,4 +85,46 @@ void Graph::delete_edge( int a, int b) {
     }
 
 
+}
+
+void Graph::BFS_visit(int vertex, ostream& out) {
+    map<int, int> distance;
+    map<int, int> parent;
+    map<int, string> color;
+    map<int, set<int> > ::iterator itr;
+
+    /* initializing values to maps */
+    for ( itr = data.begin(); itr!= data.end(); itr++ ) {
+        parent.insert(pair<int, int> ( itr->first, 0) );
+        color.insert( pair< int, string> ( itr->first, "white") );
+        distance.insert( pair< int, int> ( itr->first, 0 ) );
+    }
+    out << " graph { ";
+    queue<int> q;// used in BFS
+    q.push( vertex );
+    color[vertex] = "grey";
+    distance[vertex] = 0;
+    parent[vertex] = 0;
+
+    int u;
+    while( !q.empty())  {
+
+        u = q.front();
+
+        set<int> adj_nodes = data[u];   //inserting adjacent list to the queue. first the vertex is pushed, then its adjacency list
+
+        for ( set<int>::iterator itr = adj_nodes.begin(); itr != adj_nodes.end(); itr ++ )  {
+            if ( color[*itr] == "white" )    {
+                    color[*itr] = "grey";
+                    parent[*itr] = u;
+                    distance[*itr] = distance[u] +1;  //Distance from the ndde u
+                    q.push(*itr);
+                    out<< u<< "--"<<(*itr) << ";";  //printing to the output file
+            }
+        }
+        q.pop();
+        color[u] = "black";
+    }
+    out<< " }";
+    out.flush();
 }

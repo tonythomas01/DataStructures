@@ -1,10 +1,14 @@
 #include <iostream>
 #include "graph.h"
 #include<string>
+#include<fstream>
+#include <cstdlib>
 
 using namespace std;
 
 int main() {
+    fstream ofile;
+    ofile.open("graphbfs.dot" );
     Graph g(0);//undirected graph
     string c;
     cout<<" Enter your command ( eg: insert 2 4 , delet_vertex 2, print )"<<endl;
@@ -24,7 +28,14 @@ int main() {
             int x;
             cin>>x;
             g.delete_vertex(x);
-        } else {
+        } else if ( c == "bfs_dot") {
+            int vertex;
+            cout<<"\n Enter the start vertex";
+            cin>>vertex;
+            g.BFS_visit(vertex, ofile);
+            system("xdot graphbfs.dot");
+        }
+         else {
             cout<<"wrong command\n";
         }
     }while(1);
