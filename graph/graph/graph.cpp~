@@ -66,28 +66,6 @@ void Graph::print() {
   }
 }
 
-void Graph::print_dot(ostream& out) {
-  map<int, set<int> >::iterator iter;
-  if ( Graph_type == 0 )  {
-    out << "graph {";
-    for ( iter=databack.begin(); iter!= databack.end(); ++iter) {
-      for ( set<int>::iterator i = iter->second.begin(); i!= iter->second.end(); ++i )  {
-      out<< iter->first<<"--"<<*i<< ";";
-      }
-    }
-  out<<" }";
-  } else {
-    out << "digraph {";
-    for ( iter=data.begin(); iter!= data.end(); ++iter) {
-      for ( set<int>::iterator i = iter->second.begin(); i!= iter->second.end(); ++i )  {
-       out<< iter->first<<"--"<<*i<< ";";
-      }
-    }
-    out<<" }";
-  }
-}
-
-
 void Graph::delete_vertex(int a)    {
     map<int, set<int> >::iterator x = data.find(a);
     if( x==data.end() ) {

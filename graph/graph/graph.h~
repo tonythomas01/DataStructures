@@ -10,6 +10,9 @@ using namespace std;
 class Graph
 {
     public:
+        map<int,set<int> > data;
+        bool graph_type;
+    public:
         void insert( int a, int b);
         void print();
         void delete_vertex(int a);
@@ -18,10 +21,8 @@ class Graph
 	void print_dot(ostream& out);
         Graph(): graph_type(0) {}
         Graph( bool b) : graph_type(b)  {}
+    protected:
     private:
-	map<int,set<int> > data;
-	map < int, set<int> > databack;
-        bool graph_type;
 };
 
 #include "graph.cpp"
