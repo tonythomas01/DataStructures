@@ -25,7 +25,7 @@ void Graph::insert(int a, int b)   {
     s.insert(b);
     pair< int, set<int> > temp (a,s);
     data.insert(temp);
-    if ( Graph_type == 0) {
+    if ( graph_type == 0) {
     /* undirected graph */
         if ( y == data.end() )  {
         /* if b is not there */
@@ -40,7 +40,7 @@ void Graph::insert(int a, int b)   {
   } else {
   /* if a is already found */
     x->second.insert(b);
-    if ( Graph_type == 0 )  {
+    if ( graph_type == 0 )  {
       /* if undirected graph */
       if ( y == data.end() )  {
           set<int> s;
@@ -68,7 +68,7 @@ void Graph::print() {
 
 void Graph::print_dot(ostream& out) {
   map<int, set<int> >::iterator iter;
-  if ( Graph_type == 0 )  {
+  if ( graph_type == 0 )  {
     out << "graph {";
     for ( iter=databack.begin(); iter!= databack.end(); ++iter) {
       for ( set<int>::iterator i = iter->second.begin(); i!= iter->second.end(); ++i )  {
